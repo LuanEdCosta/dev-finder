@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from '../Home'
 import SearchResult from '../SearchResult'
+import PageNotFound from '../PageNotFound'
 
 const App = () => {
   return (
@@ -10,8 +11,11 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/search" exact>
+        <Route path="/search/:user" exact>
           <SearchResult />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.scss'
 import { useHistory } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const App = () => {
+  const [searchText, setSearchText] = useState('')
   const history = useHistory()
 
-  const onFind = () => {
-    history.push('/search')
+  const onFind = (e) => {
+    e.preventDefault()
+    if (searchText && searchText.trim()) {
+      history.push(`/search/${searchText.trim()}`)
+    }
   }
 
   return (
-    <div className="container">
+    <div className="home-page">
       <div className="searchContainer">
         <div className="titleContainer">
           <h1 className="title">
@@ -19,19 +23,21 @@ const App = () => {
             <span>Dev Finder</span>
           </h1>
           <h5 className="subtitle">
-            Find you favorite devs using the GitHub API
+            Find your favorite devs using the GitHub API
           </h5>
         </div>
-        <div className="inputContainer">
+        <form className="inputContainer" onSubmit={onFind}>
           <input
             type="text"
             className="input"
-            placeholder="Type the GitHub username"
+            placeholder="GitHub Username"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
           />
-          <button type="button" className="searchButton" onClick={onFind}>
+          <button type="submit" className="searchButton">
             Find
           </button>
-        </div>
+        </form>
       </div>
     </div>
   )

@@ -1,0 +1,31 @@
+@import "../../styles/colors.scss";
+
+.page-not-found{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $error;
+  h1{
+    text-transform: uppercase;
+    color: white;
+  }
+  .goBack{
+    border-radius: 5px;
+    padding: 16px 24px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all .2s ease-in-out;
+    outline: none;
+    text-decoration: none;
+    margin-top: 32px;
+    &:hover, &:focus{
+      background-color: white;
+      color: $error;
+    }
+  }
+}
