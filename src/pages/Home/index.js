@@ -22,9 +22,9 @@ const App = () => {
             <FontAwesomeIcon icon="search" className="icon" />
             <span>Dev Finder</span>
           </h1>
-          <h5 className="subtitle">
+          <p className="subtitle">
             Find your favorite devs using the GitHub API
-          </h5>
+          </p>
         </div>
         <form className="inputContainer" onSubmit={onFind}>
           <input
