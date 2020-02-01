@@ -1,13 +1,20 @@
 import React from 'react'
-import './styles.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from '../Home'
+import SearchResult from '../SearchResult'
 
-function App() {
+const App = () => {
   return (
-    <>
-      <div className="test">Pow</div>
-      <FontAwesomeIcon icon="check" />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/search" exact>
+          <SearchResult />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
