@@ -1,8 +1,8 @@
-# DEV FINDER
+# :mag_right: DEV FINDER
 
-This website lets you search users using the Github public API.
+This website lets you search users using the Github public API. [Dev Finder Website](https://luanedcosta.github.io/dev-finder)
 
-## MOTIVATION
+## :heart: MOTIVATION
 
 This is a simple project that i created for these purposes:
 
