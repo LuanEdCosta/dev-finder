@@ -11,3 +11,7 @@ This is a simple project that i created for these purposes:
 **2.** The use of Sass with React.
 
 **3.** Improve my UI/UX skills in web.
+
+## :man: Author
+
+Luan Eduardo da Costa | [Follow me on Linkedin](https://www.linkedin.com/in/luaneducosta/)
